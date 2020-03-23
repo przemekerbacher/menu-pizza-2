@@ -10124,7 +10124,7 @@ a.text-dark:focus {
 }
 .wrap.modern {
   color: #3f1503;
-  background-image: url("/images/background-light.jpg");
+  background-image: url("../images/background-light.jpg");
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
 }
