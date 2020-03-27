@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Allura&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .wrap {
   background-image: url("../../images/background-black.jpg");
   font-family: "Josefin Sans", sans-serif;
-  color: white;
+  color: black;
   font-size: 25px;
 }
 
@@ -12,11 +17,9 @@
 }
 
 .menu-card {
-  max-width: 100vw;
-}
-
-.back {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: white;
+  max-width: 80vw;
+  margin: 30px auto;
 }
 
 .logo {
@@ -110,32 +113,35 @@
   font-size: 2rem;
 }
 
-.category:nth-child(odd)::after {
-  content: "";
-  display: block;
-  width: 150px;
-  border: 2px solid gold;
-}
-
-.category:nth-child(even)::after {
-  content: "";
-  display: block;
-  width: 150px;
-  border: 2px solid #77aa03;
-}
-
 .more {
   display: none;
   display: none;
 }
 
 .name {
+  display: inline;
   font-weight: bold;
   white-space: unset;
 }
 
+.name p {
+  display: inline;
+}
+
 .price {
   margin-left: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .category {
@@ -201,6 +207,7 @@
 
 .menu-item .product-wrap .info .price {
   margin-left: auto;
+  padding-left: 10px;
 }
 
 .menu-item .product-wrap .info .description {
@@ -210,19 +217,21 @@
 
 .menu-item .buy {
   margin-left: 10px;
+  margin-top: -3px;
 }
 
 .menu-item .buy button {
-  font-size: 20px;
   height: 100%;
   background-color: transparent;
   border-style: none;
   color: white;
-  width: 75px;
-  height: 75px;
+  width: 25px;
+  height: 25px;
   background-color: #77aa03;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  font-size: 10px;
+  border-radius: 50%;
 }
 
 .menu-item .buy .active {
@@ -231,14 +240,6 @@
 
 .menu-item .buy .hide {
   display: none;
-}
-
-.next-page {
-  color: #ffad00;
-}
-
-.next-page:hover {
-  color: #77aa03;
 }
 
 .buttons {
@@ -356,72 +357,20 @@
   right: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
   .wrap {
     font-size: 20px;
   }
 }
 
 @media (max-width: 950px) {
-  .col-1 {
-    width: 100%;
-  }
-  .col-1 .category {
-    max-width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .col-1 .logo {
-    max-width: 100%;
-    font-size: 0.8rem;
-  }
-  .col-1 .menu-item {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .col-1 .product-image {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-  }
-  .col-1 .buy {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-  }
-  .col-1 .product-wrap {
-    width: 100%;
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-  }
+  .col-1,
   .col-2 {
     width: 100%;
   }
+  .col-1 .category,
   .col-2 .category {
-    width: 100%;
-  }
-  .col-2 .logo {
-    max-width: 100%;
-    font-size: 0.8rem;
-  }
-  .col-2 .menu-item {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .col-2 .buy {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-  }
-  .col-2 .product-wrap {
-    width: 100%;
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
-/*# sourceMappingURL=extra.css.map */
